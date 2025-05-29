@@ -1,3 +1,12 @@
+/* ==========================================================================
+   Duane Portfolio CSS
+   Created: May 25, 2025
+   Description: Styles for Duane's personal portfolio website
+   ========================================================================== */
+
+/* =========================
+   1. CSS Variables (Custom Properties)
+========================= */
 :root {
     --neutral: #232946;
     --neutral-focus: #121629;
@@ -7,6 +16,9 @@
     --accent: #d4d8f0;
 }
 
+/* =========================
+   2. CSS Reset / Box Sizing
+========================= */
 * {
     margin: 0;
 }
@@ -15,6 +27,9 @@
     box-sizing: border-box;
 }
 
+/* =========================
+   3. Base HTML Styles
+========================= */
 html {
     scroll-behavior: smooth;
 }
@@ -25,13 +40,16 @@ body {
     background-color: var(--neutral);
 }
 
+/* =========================
+   4. Typography
+========================= */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Permanent Marker", sans-serif;
 }
 
-h1 {
-}
-
+/* =========================
+   5. Layout & Navigation
+========================= */
 #navbar {
     display: flex;
     justify-content: center;
@@ -54,17 +72,38 @@ h1 {
     text-decoration: none;
     color: var(--neutral);
     padding: 0 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--neutral);
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: var(--neutral-focus);
 }
 
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   6. Sections Layout
+========================= */
 section {
     min-height: 100vh;
     padding: 70px 0;
 }
 
+/* ---------- Welcome Section ---------- */
 #welcome-section {
     background-color: var(--neutral);
     color: var(--base);
@@ -89,10 +128,11 @@ section {
 
 #welcome-section h1 {
     display: flex;
-    position: relative;
     justify-content: center;
+    align-items: center;
     margin-top: 10vh;
-    width: fit-content;
+    gap: 20px;
+    position: relative;
 }
 
 .logo {
@@ -100,9 +140,9 @@ section {
     transform: rotateY(180deg);
     color: transparent;
     -webkit-text-stroke: 2px white;
-    position: absolute;
-    left: -510px;
-    top: -120px;
+    position: relative;
+    left: 0;
+    top: 0;
 }
 
 .name {
@@ -111,16 +151,7 @@ section {
     display: inline-block;
 }
 
-#project-section .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
-    padding: 10px;
-    place-items: center;
-    max-width: 1200px;
-    margin: auto;
-}
-
+/* ---------- Project Section ---------- */
 #project-section {
     background-color: var(--secondary);
     display: flex;
@@ -134,6 +165,16 @@ section {
     width: fit-content;
     margin: 0 auto;
     font-size: 50px;
+}
+
+#project-section .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 10px;
+    place-items: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
 #project-section .project-tile {
@@ -190,6 +231,7 @@ section {
     color: var(--base);
 }
 
+/* ---------- Contact Section ---------- */
 #contact-section {
     background-color: var(--neutral);
     color: var(--base);
@@ -201,7 +243,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 400px;
+    margin-top: 80px;
     font-family: "Noto Serif", serif;
 }
 
@@ -217,7 +259,11 @@ section {
     flex-wrap: wrap;
     max-width: 1000px;
     justify-content: space-around;
-    margin: 200px auto auto;
+    margin: 60px auto 40px;
+    gap: 30px;
+    text-decoration: none;
+    color: var(--base);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 #contact-section .social-medias img {
@@ -238,9 +284,13 @@ section {
 }
 
 #contact-section .social-media:hover {
-    transform: translateY(10px);
+    color: var(--primary);
+    transform: translateY(-5px);
 }
 
+/* =========================
+   7. Footer
+========================= */
 footer {
     border-top: 3px solid var(--primary);
     color: var(--base);
@@ -248,15 +298,15 @@ footer {
     padding: 30px;
 }
 
-/* Make all images responsive */
+/* =========================
+   8. Utilities & Media
+========================= */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* -------------------------
-   Responsive Styles for Mobile
--------------------------- */
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
     #navbar {
         flex-direction: row;
@@ -282,21 +332,18 @@ img {
     }
 
     #welcome-section h1 {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
         margin-top: 40px;
         gap: 10px;
     }
 
     .logo {
         font-size: 100px;
-        position: relative;
-        left: 0;
-        top: 0;
         -webkit-text-stroke: 1px white;
         transform: rotateY(180deg);
         color: transparent;
+        position: relative;
+        left: 0;
+        top: 0;
         display: inline-block;
         margin-right: 10px;
     }
