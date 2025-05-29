@@ -11,6 +11,14 @@
     margin: 0;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Noto Serif", serif;
     text-align: center;
@@ -53,7 +61,7 @@ h1 {
 }
 
 section {
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 70px 0;
 }
 
@@ -139,6 +147,11 @@ section {
     color: var(--accent);
     border-radius: 10px;
     box-shadow: 8px 8px 10px 10px rgba(100, 100, 100, 0.5);
+}
+
+.project-tile:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
 }
 
 #project-section .projects img {
