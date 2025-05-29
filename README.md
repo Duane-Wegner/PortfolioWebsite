@@ -2,13 +2,11 @@
 
 ## 🧠 About
 
-This repository showcases a portfolio of responsive web design projects built by following the freeCodeCamp [Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/) & [Certified Full Stack Developer Curriculum](https://www.freecodecamp.org/learn/full-stack-developer/) curriculums.
+This repository showcases a portfolio of responsive web design projects built by following the freeCodeCamp [Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/) curriculums.
 
 The goal of this portfolio is to apply and demonstrate the foundational skills of HTML5 and CSS3, as taught by freeCodeCamp. Each project adheres to responsive design principles, ensuring a seamless experience across various devices.
 
 ## 📚 Projects
-
-### This portfolio showcases a selection of certification projects completed independently, as well as additional projects developed through guided, interactive, project-based learning.
 
 ### The following certified projects were completed independently, with no external guidance beyond the basic structural requirements of the project.
 
@@ -34,8 +32,6 @@ The goal of this portfolio is to apply and demonstrate the foundational skills o
 
 ![responsiveWebDesignCertification.png](res/images/responsiveWebDesignCertification.png)
 
-### **All projects completed in the FullStackDeveloperCurriculum/Labs/ directory were undertaken independently, with no external assistance beyond the provided structural guidelines. These projects were not mandatory for certification but were completed to reinforce and extend learning.**
-
 ## 💡 Features
 
 - Fully responsive design using CSS Flexbox and Grid
@@ -48,40 +44,4 @@ The goal of this portfolio is to apply and demonstrate the foundational skills o
 - HTML5
 - CSS3
 - freeCodeCamp's Test Suite (for project validation)
-
-## 📁 Folder Structure
-
-HTML_CSS-Portfolio/
-
-├── FullStackDeveloperCurriculum/
-
-│&emsp; &emsp;├── CSS/
-
-│&emsp; &emsp;│ &emsp; &emsp;└── PROJECTS
-
-│&emsp; &emsp;├── HTML/
-
-│&emsp; &emsp;│ &emsp; &emsp;└── PROJECTS
-
-│&emsp; &emsp;└── Labs/
-
-│&emsp; &emsp; &emsp; &emsp;└── PROJECTS
-
-├── ResponsiveWebDesign
-
-│&emsp; &emsp;├── CertificationProjects/
-
-│&emsp; &emsp;│ &emsp; &emsp;└── PROJECTS
-
-│&emsp; &emsp;└── Non-CertificationProjects/
-
-│&emsp; &emsp; &emsp; &emsp;└── PROJECTS
-
-├── res/
-
-│&emsp; &emsp;└── RESOURCE FILES
-
-└── README.md
-
-*(Projects for the Certification are located in the certification folder.)
 
