@@ -376,4 +376,13 @@ img {
         font-size: 32px;
         padding: 20px 10px;
     }
+
+    #contact-section h1 {
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        font-family: "Noto Serif", serif;
+    }
 }
